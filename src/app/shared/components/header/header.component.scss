@@ -1,0 +1,35 @@
+$primary-purple-color: #7c51a0;
+$primary-blue-color: #6dcce3;
+$primary-red-color:#f05b5b;
+.header .navbar {
+    background-image: linear-gradient(63deg, #2E2E2E, #2E2E2E)!important;
+    padding: 0;
+    img.company-logo {
+        margin-right: 15px;
+        margin-left: 10px;
+        width: 120px;
+        cursor: pointer;
+        padding: 7px 0px 7px 0px;
+    }
+    .topbar {
+        padding: 0 10px;
+        border-left: 3px solid #FEFEFE;
+    }
+    .navbar-nav {
+        margin-right: 15px;
+        position: absolute;
+        right: 0px;
+        .user-icon {
+            margin-right: 10px;
+            width: 42px;
+            height: 42px;
+        }
+        .user-text {
+            font-weight: 600;
+            color: #FFF;
+        }
+    }
+}
+
+
+

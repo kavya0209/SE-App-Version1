@@ -1,0 +1,74 @@
+<div class="row">
+    <form>
+        <div class="col-3">
+           <div class="form-group">
+                <span class="label-css">Select Dataset</span>
+                <select class="form-control" name="dataset" [(ngModel)]="dataset" [ngModelOptions]="{standalone: true}">
+                    <option value="">--- Select a dataset ---</option>
+                    <option value="{{folder}}" *ngFor="let folder of folderNames">{{folder}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="form-group">
+                <span class="label-css">Select A Model</span>
+                <select class="form-control" name="datasetModel" [(ngModel)]="datasetModel" [ngModelOptions]="{standalone: true}">
+                    <option value="upload">--- Select Model ---</option>
+                    <option value="RestaurantModel">Restaurant Model</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-3">
+            <button type="submit" (click)="save()" class="btn  btn-primary  button-color button-css" > RUN </button>
+        </div>
+    </form>
+</div>
+<!-- <div class="row">
+    <div class="col-6" class="run-button-css">
+        <button type="submit" (click)="save()" class="btn  btn-primary  button-color button-css" > RUN </button>
+    </div>
+</div> -->
+<div class="row" >
+    <div class="col-8"  *ngIf="downloadLinkBool == true">
+        <span class="heading-css">{{ outputText}} &nbsp;&nbsp; <a href="{{downloadLink}}" class="btn btn-primary btn-sm">Download File</a> </span>
+    </div>
+    <!-- <div class="col-6"  *ngIf="downloadLinkBool == true">
+        
+    </div> -->
+ 
+    <!-- <div class="col-6" *ngIf="downloadLinkBool == true"> -->
+      
+        <!-- <button type="button" (click)="downloadReport()" class="btn  btn-primary  button-color button-css" > SAVE </button> -->
+        <!-- <a href="link 1" target="_blank" download=""> -->
+        <!-- <form novalidate>
+            <div class="form-group">
+                <span class="label-css">Modelling Techniques</span>
+                <input type="text" name="username"
+                class="form-control input-lg" placeholder="Linera Regression"
+                required forbiddenName="" pattern="[A-Za-z0-9]+" autofocus />
+            </div>
+            <div class="form-group">
+                <span class="label-css">Adjusted R.Squared</span>
+                <input type="text" name="username"
+                    class="form-control input-lg" placeholder="0.882290235"
+                    required forbiddenName="" pattern="[A-Za-z0-9]+" autofocus />
+            </div>
+            <div class="form-group">
+                <span class="label-css">RMSE</span>
+                <input type="text" name="username"
+                    class="form-control input-lg" placeholder="0.0491066329"
+                    required forbiddenName="" pattern="[A-Za-z0-9]+" autofocus />
+            </div>
+            <div class="form-group">
+                <span class="label-css">Date And Time</span>
+                <input type="text" name="username"
+                    class="form-control input-lg" placeholder="2021-12-13"
+                    required forbiddenName="" pattern="[A-Za-z0-9]+" autofocus />
+            </div>
+            <button type="submit" class="btn  btn-primary  button-color button-css" > SAVE </button>
+        </form> -->
+    <!-- </div> -->
+</div>
+
+
+

@@ -1,0 +1,28 @@
+.label-css{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0px 10px 0px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #666;
+}
+
+.data-container{
+    margin-left: 5px;
+}
+
+.import-button{
+    margin: 15px 0px 15px 0px;
+    background-color: #19A75E;
+    border: 1px solid #009e4d;
+}
+
+.info-text-css{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0px 10px 0px;
+    font-size: 14px;
+    color: red;
+}

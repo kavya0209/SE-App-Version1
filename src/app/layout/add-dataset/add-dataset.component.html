@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-4 data-container">
+        <span class="info-text-css">*Please upload a file for which you need to create a dataset</span>
+        <form novalidate #f="ngForm" (ngSubmit)="save(f.value)" >
+            <div class="form-group">
+                <span class="label-css">Select Your Data Source</span>
+                <select  class="form-control" name="dataSource" [(ngModel)]="dataSource" (change)="onDataSourceChange()">
+                    <option value="upload">--- Data Source ---</option>
+                    <option value="1">Upload Manually</option>
+                    <option value="2">via ERP connect</option>
+                </select>   
+            </div>
+            <div class="form-group" *ngIf="showDataSetType1">
+                <span class="label-css">Dataset Type</span>
+                <input type="file" 
+                name="dataSetType1" 
+                class="form-control input-lg" placeholder="Dataset name" [ngModel]="dataSetType1" 
+                (change)="fileChangeEvent($event)"
+                required forbiddenName="" />
+            </div>
+            <div class="form-group" *ngIf="showDataSetType2">
+                <span class="label-css">Dataset Type</span>
+                <select class="form-control" name="dataSetType2" [ngModel]="dataSetType2">
+                    <option value="upload">--- Dataset Type ---</option>
+                    <option value="erp connect">Oracle</option>
+                    <option value="upload">SAP</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <span class="label-css">Provide Dataset Name</span>
+                <input type="text" name="username"
+                    class="form-control input-lg" placeholder="Dataset name"
+                    required forbiddenName="" name="dataSetName" [ngModel]="dataSetName" />
+            </div>
+            <button type="submit" class="btn  btn-primary  button-color  import-button"> IMPORT </button>
+        </form>
+    </div>
+   
+    <div class="col-6"></div>
+</div>
+
+

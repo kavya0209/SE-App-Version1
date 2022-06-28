@@ -1,0 +1,31 @@
+<div class="login-page">
+	<div class = "row parent-div">
+		<div class="col-md-6 parent-div1" style="background-color: #fff;">
+			<!-- <img src="assets/images/logo.svg" width="150px" class="user-avatar" /> -->
+			<div class="row right-contsiner-1"><h1 class="acis-text"> SCHNEIDER ELECTRIC </h1></div>
+		    <div class="row right-container">
+				<div class="login-container">
+					<span class="label-css log-in-label">Log In</span>
+					<form novalidate  #f="ngForm" (ngSubmit)="onLoggedin(f.value)">
+						<div class="form-group">
+							<span class="label-css text-css">Email</span>
+							<input type="text" name="email"
+							[(ngModel)]="email" class="form-control input-lg" placeholder="name@domain.com"
+							required forbiddenName="" pattern="[A-Za-z0-9]+" autofocus />
+						</div>
+						<div class="form-group">
+							<span class="label-css text-css">Password</span>
+							<input type="password" name="password"
+								class="form-control input-lg" placeholder="at least 8 characters"
+								[(ngModel)]="password" required forbiddenName="" pattern="[A-Za-z0-9]+" autofocus />
+						</div>
+						<button type="submit" class="btn  btn-primary  button-color  login-button" > LOGIN </button>
+					</form>
+					<span class="forgot-text"><a href="javascript:void(0)" (click)="gotoSignUpPage()"><span class="sign-up-label-css">Dont have an account ?</span><span class="password-label-css"> Sign up</span></a></span><br>
+					<span class="forgot-text"><a href="javascript:void(0)" (click)="gotoResetPwdPage()" ><span class="password-label-css">Forgot Password ?</span></a></span>
+				</div>
+		    </div>
+		</div>	
+		<div class="col-md-6" style="background: linear-gradient( 120deg, rgb(0,158,77,2), rgba(71, 184, 126, 0.7) , rgba(91,192, 140, 0.5)), url('assets/images/bannerloginpage.png') no-repeat top center; background-size: cover;"></div>
+	</div>
+</div>
